@@ -1,0 +1,464 @@
+\documentclass{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{amsfonts}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{pgfplots}
+\usepackage{esint}
+\pgfplotsset{compat=1.9}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\arabic{section}}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{}{1em}{}
+
+\setlength{\droptitle}{-3em}
+\title{\vspace{-1cm}
+ИДЗ №2}
+\author{Чилеше Абрахам}
+\date{Группа: Б9122-02-03-01сцт}
+
+\geometry{a4paper, margin=2cm}
+
+\begin{document}
+	\maketitle
+
+	\section{Вычислить интеграл:}
+	\[
+		\oint_{|z| = 1}\frac{2 + \sin{z}}{z(z + 2i)}\, dz
+	\]
+
+	\subsection{Решение:}
+	Найдем Особые точки:\\ $z = 0$.\\ $z = -2i$.\\
+
+	\raggedright Точка $z = 2i$ не входит в область, ограниченную данным контуром,
+	поэтому не рассматривается.
+	\newline
+	\raggedright Точка $z_{1} = 0$ является простым полюсом. Найдем вычет в этой
+	точке.
+
+	\[
+		\underset{z_1}{\text{res}}\ f(z) = \lim\limits_{z\rightarrow 0}\left[f(z) (z
+		- 0) \right] = \lim\limits_{z\rightarrow 0}\frac{2z + z\sin{z}}{z(z + 2i)}= \frac{2
+		+ \sin{z}}{z + 2i}= \frac{1}{i}= -i
+	\]
+
+	\raggedright Отсюда следующий результат.
+	\newline
+	\[
+		\oint_{|z| = 1}\frac{2 + \sin{z}}{z(z + 2i)}\ dz = 2\pi i \sum_{k}^{i=1}\underset
+		{z_1}{\text{res}}\ f(z) = 2\pi i.(-i) = 2\pi
+	\]
+
+	\subsection{Ответ:}
+	\[
+		\raggedright{\oint_{|z| = 1} \frac{2 + \sin{z}}{z(z + 2i)}\, dz = 2\pi}
+	\]
+
+	\vspace{1.5cm}
+
+	\section{Вычислить интеграл: }
+	\[
+		\oint_{|z| = 3}\frac{1 - \sin{\frac{1}{z}}}{z}\, dz
+	\]
+
+	\subsection{Решение:}
+
+	\section{Вычислить интеграл: }
+	\[
+		\ointop_{|z| =0,2}\frac{3\pi z - \sin{3\pi z}}{-z^{2}\sh^{2}\pi^{2}z}\ dz
+	\]
+	\subsection{Решение:}
+	\raggedright Особые точки этой функций $z =ik/\pi$. Однако в контур попадает
+	только z = 0. Определим тип этой особой точки:
+	\newline
+	\raggedright
+	\[
+		f(z) = \frac{3\pi z - \sin{3\pi z}}{-z^{2}\sh^{2}\pi^{2}z}= \frac{g(z)}{h(z)}
+	\]
+	\[
+		g(z) = 3\pi z - \sin{3\pi z}, \quad \quad h(z) = -z^{2}\sh^{2}\pi^{2}z
+	\]
+
+	\[
+		\lim\limits_{z\rightarrow 0}[f(z)z] = \lim\limits_{z\rightarrow 0}\left(\frac{3\pi
+		z - \sin{3\pi z}}{-z\sh^{2}\pi^{2}z}\right) =
+	\]
+
+	\[
+		\lim\limits_{z\rightarrow 0}\left(\frac{3\pi - 3\pi\cos{3\pi z }}{-\sh^{2}\pi^{2}z
+		- 2\pi^{2}z\sh(\pi^{2}z)\ch(\pi^{2}z)}\right) =
+	\]
+
+	\[
+		\lim\limits_{z\rightarrow 0}\left(\frac{9\pi^{2}\sin{3\pi z}}{-4\pi^{2}\sh\pi^{2}z\ch\pi^{2}z
+		- 4\pi^{4}z\ch^{2}\pi^{2}z + 2\pi^{4}z}\right) =
+	\]
+
+	\[
+		\lim\limits_{z\rightarrow 0}\left(\frac{27\pi^{4}cos{3\pi z}}{-12\pi^{4}\ch^{2}\pi^{2}z
+		+ 6\pi^{4}-8\pi^{6}zch\pi^{2}z\sh\pi^{2}z}\right) = -\frac{9}{2\pi}
+	\]
+	\newline
+	По основной теореме Коши о вычетах:
+
+	\[
+		\ointop_{|z| =0,2}\frac{3\pi z - \sin{3\pi z}}{-z^{2}\sh^{2}\pi^{2}z}\ dz = 2
+		\pi i \sum\limits_{i=1}^{n}resf(z) = 2\pi i. \left(-\frac{9}{2\pi}\right) = -
+		9i
+	\]
+
+	\subsection{Ответ:
+	\[
+		\ointop_{|z| =0,2}\frac{3\pi z - \sin{3\pi z}}{-z^{2}\sh^{2}\pi^{2}z}\ dz = -
+		9i
+	\]
+	}
+
+	\vspace{1.5cm}
+
+	\section{Вычислить интеграл: }
+
+	\section{Вычислить интеграл: }
+	\[
+		\int_{0}^{2\pi}\frac{dt}{3 - 5\sqrt{5}\sin{t}}
+	\]
+
+	\subsection{Решение:}
+	Преобразуем в контурный интеграл, используя следующие преобразования:
+	\[
+		z = e^{\pi}; \quad \cos{t}= \frac{1}{2}\left( z + \frac{1}{z}\right); \quad \sin
+		{t}= \frac{1}{2i}\left( z - \frac{1}{z}\right); \quad dt = \frac{dz}{iz}
+	\]
+	\[
+		\int_{0}^{2\pi}R(\cos{t}, \sin{t}) ,\ dt = \ointop_{|z| = 1}F(z) ,\ dz
+	\]
+	\[
+		\int_{0}^{2\pi}\frac{dt}{3 - 5\sqrt{5}\sin{t}}= \ointop_{|z| = 1}\frac{\frac{dz}{iz}}{5
+		-\frac{\sqrt{5}}{2i}(z - \frac{1}{z})}= \ointop_{|z| = 1}\frac{\frac{dz}{iz}}{3iz
+		-\frac{\sqrt{5}}{2}(z^{2}- 1)}= \ointop_{|z| = 1}\frac{2dz}{6iz -\sqrt{5}(z^{2}-
+		1)}=
+	\]
+	\[
+		\ointop_{|z| = 1}\frac{2dz}{-\sqrt{5}(z - i/\sqrt{5})(z - i\sqrt{5})}
+	\]
+	Таким образом, подынтегральная функция имеет 2 особые точки:
+	$z = \frac{i}{\sqrt{5}}; \quad z = i\sqrt{5}$ \\ Точка $z = i\sqrt{5}$ не
+	попадает в область, ограниченную контуром интегрирования. \\ Точка
+	$z = \frac{i}{\sqrt{5}}$ является простым полюсом. Необходимо вычислить вычет в
+	этой точке:
+
+	\[
+		\underset{z = \frac{i}{\sqrt{5}}}{\text{res}}\ f(z) = \lim\limits_{z\rightarrow
+		\frac{i}{\sqrt{5}}}\left[ f(z)(z -\frac{i}{\sqrt{5}})\right] =
+	\]
+	\[
+		\lim\limits_{z\rightarrow \frac{i}{\sqrt{5}}}\frac{2}{-\sqrt{5}(z - i\sqrt{5}}
+		) = \frac{2}{-\sqrt{5}(\frac{i}{\sqrt{5}} -i\sqrt{(}5)}= -\frac{i}{2}
+	\]
+	По основной теореме Коши о вычетах получаем:
+	\[
+		\ointop_{|z| = 1}\frac{2dz}{-\sqrt{5}(z -\frac{i}{\sqrt{5}}) (z - i\sqrt{5})}
+		= 2\pi i \sum\limits_{i = 1}^{n}resf(z) = 2\pi i \cdot (-\frac{i}{2}) = \pi
+	\]
+	\subsection{Ответ:
+	\[
+		\int_{0}^{2\pi}\frac{dt}{3 - 5\sqrt{5}\sin{t}}= \pi
+	\]
+	}
+
+	\section{Вычислить интеграл: }
+	\[
+		\int_{0}^{2\pi}\frac{dt}{(\sqrt{5}+ \cos{t})^{2}}
+	\]
+	\subsection{Решение:}
+	Преобразуем в контурный интеграл, используя следующие преобразования:
+	\[
+		z = e^{\pi}; \quad \cos{t}= \frac{1}{2}\left( z + \frac{1}{z}\right); \quad \sin
+		{t}= \frac{1}{2i}\left( z - \frac{1}{z}\right); \quad dt = \frac{dz}{iz}
+	\]
+	\[
+		\int_{0}^{2\pi}R(\cos{t}, \sin{t}) ,\ dt = \ointop_{|z| = 1}F(z) ,\ dz
+	\]
+	\[
+		\int_{0}^{2\pi}\frac{dt}{(\sqrt{5}+ \cos{t})^{2}}= \ointop_{|z| = 1}\frac{\frac{dz}{iz}}{(\sqrt{5}+
+		\frac{{1}}{2}(z + \frac{1}{z}))^{2}}= \ointop_{|z| = 1}\frac{zdz}{i(z\sqrt{5}+
+		\frac{1}{2}(z^{2} + 1))^{2}}= \ointop_{|z| = 1}\frac{4zdz}{i \left[(z + \sqrt{5}+
+		2) (z + \sqrt{5}- 2)\right]^{2}}
+	\]
+	Таким образом, подынтегральная функция имеет 2 особые точки: $z = 2 - \sqrt{5};
+	\quad z = -2 - \sqrt{5}$ \\ Точка $z = 2 - \sqrt{5}$ не попадает в область,
+	ограниченную контуром интегрирования. \\ Точка $z = -2 - \sqrt{5}$ является полюсом
+	второго порядка. Необходимо вычислить вычет в этой точке:
+	\[
+		\underset{z = 2 - \sqrt{5}}{\text{res}}\ f(z) = \lim\limits_{z\rightarrow 2 -
+		\sqrt{5}}\frac{d}{dz}\left[ f(z)(z - 2 + \sqrt{5})^{2}\right] = \lim\limits_{z
+		= 2 - \sqrt{5}}\frac{d}{dz}\frac{4z}{i \left[(z + \sqrt{5}+2)^{2} \right] }=
+	\]
+	\[
+		\frac{4}{i}\cdot \lim\limits_{z = 2 - \sqrt{5}}\frac{d}{dz}\frac{z}{ \left[(z
+		+ \sqrt{5}+2)^{2} \right] }= \frac{4}{i}\cdot \lim\limits_{z = 2 - \sqrt{5}}\frac{2
+		+ \sqrt{5} - z}{ (z + \sqrt{5}+2)^{3} }= \frac{4}{i}\cdot.\frac{2 + \sqrt{5}
+		- 2 + \sqrt{5}}{ (2 + \sqrt{5}+2 - \sqrt{5})^{3} }= \frac{4}{i}\cdot\frac{2\sqrt{5}}{4^{3}}
+		= \frac{\sqrt{5}}{8i}
+	\]
+	По основной теореме Коши о вычетах получаем:
+	\[
+		\ointop_{|z| = 1}\frac{4zdz}{i \left[(z + \sqrt{5}+ 2) (z + \sqrt{5}- 2)\right]^{2}}
+		= 2\pi i \sum\limits_{i = 1}^{n}resf(z) = 2\pi i \cdot \frac{\sqrt{5}}{8i}= \frac{\sqrt{5}}{4}
+		\pi
+	\]
+	\subsection{Ответ: $\frac{\sqrt{5}}{4}\pi$}
+
+	\vspace{1cm}
+
+	\section{Вычислить интеграл: }
+	\[
+		\int_{-\infty}^{+\infty}\frac{dx}{(x^{2} - x + 1)^{2}}
+	\]
+	\subsection{Решение:}
+	Применяем формулу:
+	\[
+		\int_{-\infty}^{+\infty}R(x)dx = 2\pi i \sum\limits_{m}\underset{z_m}{\text{res}}
+		R(z)
+	\]
+	Сумма вычетов берется по всем полюсам полуплоскости $Im{z}> 0$. Преобразуем
+	исходный интеграл:
+	\[
+		\int_{-\infty}^{+\infty}\frac{dx}{(x^{2} - x + 1)^{2}}= \int_{-\infty}^{+\infty}
+		\frac{dz}{(z^{2} - z + 1)^{2}}= \int_{-\infty}^{+\infty}\frac{dz}{(z - \frac{1}{2}+
+		\frac{i\sqrt{3}}{2})^{2} (z - \frac{1}{2}- \frac{i\sqrt{3}}{2})^{2}}
+	\]
+	Особые точки:
+	\[
+		z = \frac{1}{2}+ \frac{i\sqrt{3}}{2}\quad (Im{z}> 0); \quad z = \frac{1}{2}-
+		\frac{i\sqrt{3}}{2}\quad (Im{z}< 0)
+	\]
+	Точка $z = \frac{1}{2}+ \frac{i\sqrt{3}}{2}$ является полюсом второго порядка
+	и вычет в ней равен:
+	\[
+		\underset{z = \frac{1}{2} + \frac{i\sqrt{3}}{2}}{\text{res}}f(z) = \lim\limits
+		_{z\rightarrow\frac{1}{2} + \frac{i\sqrt{3}}{2}}\frac{d}{dz}\left[f(z)(z - \frac{1}{2}
+		- \frac{i\sqrt{3}}{2})^{2} \right] = \lim\limits_{z\rightarrow\frac{1}{2} +
+		\frac{i\sqrt{3}}{2}}\frac{d}{dz}\left[\frac{1}{(z - \frac{1}{2}+
+		\frac{i\sqrt{3}}{2})^{2}}\right] =
+	\]
+	\[
+		\lim\limits_{z\rightarrow\frac{1}{2} + \frac{i\sqrt{3}}{2}}\left[\frac{-16}{(2z
+		- 1 + i\sqrt{3})^{3}}\right] = \frac{2\sqrt{3}}{9i}
+	\]
+	Используем приведунную в начале задачи формулу:
+	\[
+		\int_{-\infty}^{+\infty}\frac{dx}{(x^{2} - x + 1)^{2}}= 2\pi i \left(\frac{2\sqrt{3}}{9i}
+		\right) = \frac{4\sqrt{3}\pi}{9}
+	\]
+	\subsection{Ответ: $\frac{4\sqrt{3}\pi}{9}$}
+
+	\vspace{1cm}
+
+	\section{Вычислить интеграл: }
+	\[
+		\int_{-\infty}^{+\infty}\frac{x^{3}\sin{x}}{x^{4} +5x^{2} + 4},\ dx
+	\]
+	\subsection{Решение:}
+	Воспользуемся формулой
+	\[
+		\int_{-\infty}^{+\infty}R(x)\sin{\lambda}xdx = Im \left[2\pi i\sum\limits_{m}
+		\underset{z_m}{\text{res}}R(z)e^{i\lambda z}\right], \lambda > 0
+	\]
+	Исходная функция полностью удовлетворяет условиям применения данной формулы. Необходимо
+	найти $z_{m}$:
+	\[
+		x^{4} +5x^{2} + 4 = 0 \rightarrow z_{1,2}= \pm i; \quad z_{3,4}= \pm 2i;
+	\]
+	Сумма вычетов берется по верхней полуплоскости $Im{z}> 0$. Из этого следует $z_{m}
+	= \{i; 2i\}$ Это особая точка является полюсом. Необходимо найти в ней вычет:
+
+	\[
+		1) \quad \underset{z = i}{\text{res}}R(z)e^{i\lambda z}= \lim\limits_{z
+		\rightarrow i}\frac{z^{3}(z-1)}{(z^{2} + 1)(z^{2} + 4)}\cdot e^{iz}= \lim\limits
+		_{z \rightarrow i}\frac{z^{3}e^{iz}}{(z + i)(z^{2} + 4)}= \frac{-ie^{-1}}{(i
+		+ i)(-1 + 4)}= \frac{-i}{6i}e^{-1}= -\frac{1}{6}e^{-1}
+	\]
+
+	\[
+		2) \quad \underset{z = 2i}{\text{res}}R(z)e^{i\lambda z}= \lim\limits_{z
+		\rightarrow 2i}\frac{z^{3}(z-2i)}{(z^{2} + 1)(z^{2} + 4)}\cdot e^{iz}= \lim\limits
+		_{z \rightarrow 2i}\frac{z^{3}e^{iz}}{(z + 2i)(z^{2} + 1)}= \frac{-8ie^{-2}}{(2i
+		+ 2i)(-1 + 4)}= \frac{-8i}{-12i}e^{-2}= -\frac{2}{3}e^{-2}
+	\]
+
+	\[
+		\int_{-\infty}^{+\infty}\frac{x^{3}\sin{x}}{x^{4} +5x^{2} + 4},\ dx = Im \left
+		[2\pi i\sum\limits_{m}\underset{z_m}{\text{res}}R(z)e^{i\lambda z}\right] = \frac{4\pi}{3}
+		e^{-2}+ \frac{\pi}{3}e^{-1}
+	\]
+	\subsection{Ответ: $\quad \frac{4\pi}{3}e^{-2}+ \frac{\pi}{3}e^{-1}$}
+
+	\vspace{1cm}
+	\section{Найти оригинал по заданному изображению: $\frac{1}{p^{3} - 1}$ }
+	\subsection{Решение:}
+	Необходимо представитть выражение, используя метод неопределенных
+	коэффициентов:
+	\[
+		\frac{1}{p^{3} - 1}= \frac{1}{(p - 1)(p^{2} + p + 1)}= \frac{A}{p-1}+ \frac{Bp
+		+ C}{p^{2} + p + 1}=
+	\]
+	\[
+		= \frac{Ap^{2} + Ap + A + Bp^{2} - Bp + Cp - C}{(p-1)(p^{2} + p + 1)}
+	\]
+	\[
+		= \frac{(A + B)p^{2} + (A-B+C)p + A - C}{(p-1)(p^{2} + p + 1)}
+	\]
+
+	\[
+		\begin{cases}
+			A + B = 0     \\
+			A - B + C = 0 \\
+			A - C = 1
+		\end{cases}
+		\longrightarrow
+		\begin{cases}
+			A = \frac{1}{3}   \\
+			B = -\frac{1}{3}  \\
+			C = - \frac{2}{3}
+		\end{cases}
+	\]
+	Таким образом:
+	\[
+		\frac{1}{p^{3} - 1}= \frac{1}{3}\cdot \frac{1}{p-1}-\frac{1}{3}\cdot \frac{p}{p^{2}
+		+ p + 1}- \frac{2}{3}\cdot \frac{1}{p^{2} + p + 1}
+	\]
+
+	\[
+		\frac{1}{3}\cdot \frac{1}{p-1}-\frac{1}{3}\cdot \frac{p}{(p + \frac{1}{2})^{2}
+		+ \frac{3}{4}}- \frac{2}{3}\cdot \frac{1}{(p + \frac{1}{2})^{2} + \frac{3}{4}}
+	\]
+
+	\[
+		\frac{1}{3}\cdot \frac{1}{p-1}-\frac{1}{3}\cdot \frac{p + \frac{1}{2}}{(p + \frac{1}{2})^{2}
+		+ \frac{3}{4}}- \frac{1}{\sqrt{3}}\cdot \frac{\frac{\sqrt{3}}{2}}{(p + \frac{1}{2})^{2}
+		+ \frac{3}{4}}\rightarrow
+	\]
+
+	\[
+		\rightarrow \frac{1}{3}e^{i2}- \frac{1}{3}e^{-i2}cos\frac{\sqrt{3}}{2}t - \frac{1}{\sqrt{3}}
+		e^{-1}sin\frac{\sqrt{3}}{2}t
+	\]
+
+	\subsection{Ответ: $\quad 1\frac{1}{3}e^{i2}- \frac{1}{3}e^{-i2}cos\frac{\sqrt{3}}{2}
+	t - \frac{1}{\sqrt{3}}e^{-1}sin\frac{\sqrt{3}}{2}t$}
+
+	\vspace{1cm}
+	\section{ Найти решения дифференциального уравнения, удовлетворяющее условиям:
+	y'' - y = $\frac{1}{ch^{2}1}$ }
+
+	\vspace{1cm}
+	\section{Операционным методом решить задачу Коши
+	$y'' + y' - 2y = e^{-t}, y(0) = -1, y'(0) = 1$ }
+	\subsection{Решение:}
+
+	\[
+		p^{2}Y(p) - py(0) - y'(0) + pY(p) - y(0) -2Y(p) = \frac{1}{p+1}
+	\]
+	\[
+		p^{2}Y(p) + p + pY(p)+1 - 2Y(p) = \frac{1}{p+1}
+	\]
+	\[
+		(p^{2} + p - 2)Yp(p) = (p+2)(p-1)Y(p) = \frac{1}{p+1}-p-1 = \frac{-p(p+2)}{p+1}
+	\]
+	\[
+		Y(p) = \frac{-p(p+2)}{(p+1)(p+2)(p-1)}= \frac{-P}{(p+1)(p-1)}= \frac{-P}{2}(\frac{1}{p-1}
+		- \frac{1}{p+1})
+	\]
+
+	\text{ Найдем оригинал $y(t)$}
+
+	\[
+		Y(p) = -\frac{P}{2}\left(\frac{1}{p-1}- \frac{1}{p+1}\right) = \frac{1}{2}\frac{p}{p+1}
+		-\frac{1}{2}\frac{p}{p-1}= \frac{1}{2}\left(1 - \frac{1}{p+1}\right) - \frac{1}{2}
+		\left(1 + \frac{1}{p-1}\right) = -\frac{1}{2}\frac{1}{p+1}- \frac{1}{2}\frac{1}{p-1}
+	\]
+	\[
+		\rightarrow y(t) = -\frac{1}{2}e^{-t}- \frac{1}{2}e^{t}
+	\]
+
+	\subsection{Ответ: $\quad y(t) = -\frac{1}{2}e^{-t}- \frac{1}{2}e^{t}$}
+
+	\vspace{1cm}
+	\section{Найти решение системы дифференциальных уравнений, удовлетворяющее заданному
+	начальному условию }
+	\[
+		\begin{cases}x` = x + 2y \quad\quad x(0) = 0\\ y` = 2x + y + 1 \quad\quad y(0
+		) = 5 \end{cases}
+	\]
+	\subsection{Решение:}
+	\[
+		\begin{cases}
+			pX(p) - x(0) = X(p) + 2Y(p)               \\
+			pY(p) - y(0) = 2X(p) + Y(p) + \frac{1}{p}
+		\end{cases}
+		\vspace{0.5cm}
+	\]
+
+	\text{поставим начальные условия}
+	\vspace{0.3cm}
+	\[
+		\begin{cases}
+			pX(p) = X(p) + 2Y(p)                   \\
+			pY(p) - 5 = 2X(p) + Y(p) + \frac{1}{p}
+		\end{cases}
+		\vspace{0.4cm}
+	\]
+
+	\text{Выразим x(0) через y(p), использя второе уравнение}
+	\[
+		pY(p) - 5 = 2X(p) + Y(p) + \frac{1}{p}
+	\]
+	\[
+		X(p) = \frac{pY(p) - Y(p) - 5 - \frac{1}{p}}{2}
+	\]
+	\[
+		p \cdot\frac{pY(p) - Y(p) - 5 - \frac{1}{p}}{2}= \frac{pY(p)- Y(p) - 5 -
+		\frac{1}{p}}{2}+ 2Y(p)
+	\]
+	\[
+		Y(p) = \frac{5p-4-\frac{1}{p}}{p^{2} - 2p - 3}
+	\]
+	\[
+		Y(p) = \frac{5p-4-\frac{1}{p}}{p^{2} - 2p - 3}= \frac{5p-4-\frac{1}{p}}{(p-1)^{2}
+		- 4}- \frac{1}{3p}+ \frac{1}{3p}= \frac{1}{3}\frac{14p - 10}{(p-1)^{2} - 4}+
+		\frac{1}{3p}= \frac{14}{3}\frac{p-1}{(p-1)^{2} - 4}+ \frac{2i}{3i(p-1)^{2} -
+		4}+ \frac{1}{3p}
+	\]
+
+	\[
+		y(t) = \frac{14}{3}e^{t} \cos{2it}- \frac{2i}{3}e^{t} \sin{2it}+ \frac{1}{3}=
+		\frac{14}{3}e^{t}\ch{2t}+ \frac{2}{3}e^{t}\sh{2t}+ \frac{1}{3}
+	\]
+	\[
+		y' = 2x + y + 1 \rightarrow x(t) = \frac{1}{2}(y' - y - 1) = \frac{1}{2}(6e^{t}
+		\ch2t + 10e^{t}\sh{2t}- \frac{14}{3}e^{t}\ch{2t}- \frac{2}{3}e^{t}\sh{2t}-\frac{1}{3}
+		- 1)
+	\]
+	\[
+		= \frac{2}{3}e^{t}\ch{2t}+ \frac{14}{3}e^{\sh}{2t}- \frac{2}{3}
+	\]
+
+	\subsection{Ответ:
+	\[
+		x(t) = \frac{2}{3}e^{t}\ch{2t}+ \frac{14}{3}e^{t}\sh{2t}- \frac{2}{3}
+	\]
+	\[
+		y(t) = \frac{14}{3}e^{t}\ch{2t}+ \frac{2}{3}e^{t}\sh{2t}+ \frac{1}{3}
+	\]
+	}
+\end{document}
